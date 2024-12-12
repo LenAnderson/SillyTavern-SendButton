@@ -39,6 +39,7 @@ export class SendButton {
             badgeBackground: this.badgeBackground,
             title: this.title,
             trapScript: this.trapScript,
+            clearInput: this.clearInput,
         };
     }
 

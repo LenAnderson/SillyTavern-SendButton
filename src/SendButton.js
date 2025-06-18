@@ -110,14 +110,14 @@ export class SendButton {
             evt.preventDefault();
             evt.stopPropagation();
             evt.stopImmediatePropagation();
+            const input = ta.value;
             if (ta.value.length > 0) {
-                const input = ta.value;
                 if (this.clearInput) {
                     ta.value = '';
                     ta.dispatchEvent(new Event('input', { bubbles:true }));
                 }
-                this.execute(input, evt);
             }
+            this.execute(input, evt);
         } else {
             sendTextareaMessage();
         }
